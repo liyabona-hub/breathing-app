@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button>Play</button>
+    <audio src="path/to/song.mp3" controls autoplay></audio> -->
+    <!-- <button onclick="Audio">Play Sound
+    </button>
+   <audio class="Audio" autoplay  src="2Pac Dear Mama (128kbps).mp3"></audio> -->
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <p>Instead of doing the audio tag method, I want to do it through the buttons. However I don't know how to do this.
+    </p>
+    <br>
+
+    <p>HTML Audio tag method (the method I don't want):</p>
+    <div id="soundTag"></div><br>
+
+    <p>Button method (the method I want, but doesn't work):</p>
+    <div>
+        <button id="button_play" class="first" type="button">
+            Begin</button>
+        
+    </div> 
+    
+    <script>
+       document.getElementById("soundTag").innerHTML = "<audio volume preload='none' src='2Pac Dear Mama (128kbps).mp3'></audio>";
+
+        $('#button_play').on('click', function () {
+            //I added this
+            $("audio")[0].play();
+        });
+
+    </script>
+</body>
+
+</html>
